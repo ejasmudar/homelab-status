@@ -22,17 +22,13 @@ sites:
 
   # Internal Tailscale endpoints (requires Tailscale Action)
   - name: Proxmox1 (NAS)
-    url: http://100.103.56.72:8006
+    url: https://100.103.56.72:8006
   - name: Proxmox3
-    url: http://100.88.223.21:8006
+    url: https://100.88.223.21:8006
   - name: Proxmox5 (Dubai)
-    url: http://100.107.192.45:8006
-  - name: ubuntu-docker
-    url: http://100.91.13.22:8080
-  - name: Hermes Agent
-    url: http://100.64.108.70:8080
+    url: https://100.107.192.45:8006
   - name: Paperless-ngx (Internal)
-    url: http://100.112.196.119:8000
+    url: http://100.112.196.119:80
   - name: Home Assistant (Internal)
     url: http://100.74.137.55:80
 
