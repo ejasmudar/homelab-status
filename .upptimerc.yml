@@ -1,31 +1,66 @@
 # Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: ejasmudar
+repo: homelab-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # Public endpoints (reachable without Tailscale)
+  - name: Home Assistant
+    url: https://homeassistant.mudar.online
+    expectedStatusCodes:
+      - 200
+      - 302
+  - name: Paperless-ngx
+    url: https://paperless.mudar.online
+    expectedStatusCodes:
+      - 200
+      - 302
+  - name: Nudge Reminders
+    url: https://nudge.mudar.online
+    expectedStatusCodes:
+      - 200
+      - 302
+
+  # Internal Tailscale endpoints (requires Tailscale Action)
+  - name: Proxmox1 (NAS)
+    url: http://100.103.56.72:8006
+  - name: Proxmox3
+    url: http://100.88.223.21:8006
+  - name: Proxmox5 (Dubai)
+    url: http://100.107.192.45:8006
+  - name: ubuntu-docker
+    url: http://100.91.13.22:8080
+  - name: Hermes Agent
+    url: http://100.64.108.70:8080
+  - name: Paperless-ngx (Internal)
+    url: http://100.112.196.119:8000
+  - name: Home Assistant (Internal)
+    url: http://100.74.137.55:80
+
+notifications:
+  - type: custom-webhook
+    url: "https://ntfy.sh/ejasmudar-homelab-alerts"
+    method: "POST"
+    body: >-
+      {
+        "topic": "ejasmudar-homelab-alerts",
+        "title": "{{ title }}",
+        "message": "{{ message }}",
+        "tags": ["warning"],
+        "priority": "high"
+      }
+    headers:
+      Content-Type: "application/json"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Ejas Homelab Status
+  introTitle: "**Ejas Homelab** — Real-time uptime monitoring"
+  introMessage: "Monitoring homelab services across Tailscale. Powered by [Upptime](https://github.com/upptime/upptime)."
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: "https://github.com/ejasmudar/homelab-status"
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+commitMessages:
+  ci: "chore: run CI"
+  update: "chore(ci): update graphs and data"
