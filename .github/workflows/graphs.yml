@@ -47,6 +47,10 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+      - name: Tailscale
+        uses: tailscale/github-action@v4
+        with:
+          authkey: ${{ secrets.TS_AUTH_KEY }}
       - name: Setup Node.js for graphs
         uses: actions/setup-node@v6
         with:
@@ -56,4 +60,5 @@ jobs:
         with:
           command: "graphs"
         env:
+          NODE_TLS_REJECT_UNAUTHORIZED: "0"
           GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
