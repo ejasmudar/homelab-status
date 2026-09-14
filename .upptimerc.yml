@@ -23,29 +23,28 @@ sites:
   # Internal Tailscale endpoints (requires Tailscale Action)
   - name: Proxmox1 (NAS)
     url: https://100.103.56.72:8006
-    __dangerous__insecure: true
+    allowInsecure: true
   - name: Proxmox2
     url: https://100.113.197.28:8006
-    __dangerous__insecure: true
+    allowInsecure: true
   - name: Proxmox3
     url: https://100.88.223.21:8006
-    __dangerous__insecure: true
+    allowInsecure: true
   - name: Proxmox4
     url: https://100.93.156.124:8006
-    __dangerous__insecure: true
+    allowInsecure: true
   - name: Proxmox5 (Dubai)
     url: https://100.107.192.45:8006
-    __dangerous__insecure: true
+    allowInsecure: true
+  - name: n8n
+    url: https://n8n.mudar.online
+    expectedStatusCodes:
+      - 200
+      - 302
+  - name: Paperless-ngx (Internal)
+    url: http://100.112.196.119:80
   - name: Home Assistant (Internal)
     url: http://100.74.137.55:80
-  - name: Paperless-ngx (Internal)
-    url: http://100.112.196.119:8000
-  - name: n8n
-    url: http://100.95.191.99:5678
-  - name: Hermes Agent
-    url: http://100.64.108.70:8080
-  - name: ubuntu-docker (Dashy)
-    url: http://100.91.13.22:8080
 
 notifications:
   - type: custom-webhook
