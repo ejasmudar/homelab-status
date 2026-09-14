@@ -42,9 +42,15 @@ sites:
       - 200
       - 302
   - name: Paperless-ngx (Internal)
-    url: http://100.112.196.119:80
+    url: http://100.112.196.119:8000
   - name: Home Assistant (Internal)
     url: http://100.74.137.55:80
+  - name: n8n (Internal)
+    url: http://100.95.191.99:5678
+  - name: Hermes Agent
+    url: http://100.64.108.70:8080
+  - name: ubuntu-docker (Dashy)
+    url: http://100.91.13.22:8080
 
 notifications:
   - type: custom-webhook
