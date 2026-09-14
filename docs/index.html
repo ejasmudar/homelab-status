@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejas Homelab — Status</title>
+<link rel="icon" href="https://raw.githubusercontent.com/upptime/upptime/master/assets/upptime-icon.svg" type="image/svg+xml">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem}
+  h1{font-size:1.4rem;font-weight:600;margin-bottom:.3rem;color:#e6edf3}
+  .subtitle{font-size:.85rem;color:#8b949e;margin-bottom:2.5rem}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.5rem 2rem;width:100%;max-width:480px}
+  .card h2{font-size:.85rem;font-weight:500;color:#8b949e;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem}
+  .svc{display:flex;align-items:center;padding:.55rem 0;border-bottom:1px solid #21262d}
+  .svc:last-child{border-bottom:none}
+  .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-right:.75rem}
+  .dot.up{background:#3fb950;box-shadow:0 0 6px #3fb95088}
+  .dot.down{background:#f85149;box-shadow:0 0 6px #f8514988}
+  .dot.degraded{background:#d29922;box-shadow:0 0 6px #d2992288}
+  .svc-name{flex:1;font-size:.9rem;color:#e6edf3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .svc-name a{color:inherit;text-decoration:none}
+  .svc-name a:hover{text-decoration:underline}
+  .svc-meta{text-align:right;flex-shrink:0;margin-left:.75rem}
+  .svc-uptime{font-size:.8rem;color:#8b949e}
+  .svc-time{font-size:.7rem;color:#484f58;margin-top:.15rem}
+  .badge{display:inline-block;font-size:.65rem;padding:.1rem .4rem;border-radius:4px;font-weight:600}
+  .badge.up{background:#238636;color:#fff}.badge.down{background:#da3633;color:#fff}.badge.degraded{background:#9e6a03;color:#fff}
+  .legend{display:flex;gap:1.2rem;margin-bottom:1.5rem;font-size:.75rem;color:#8b949e}
+  .legend span{display:flex;align-items:center;gap:.35rem}
+  .legend .ldot{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .refresh{font-size:.7rem;color:#484f58;margin-top:1.5rem}
+  .loading{text-align:center;padding:2rem;color:#8b949e}
+  .loading .spinner{display:inline-block;width:20px;height:20px;border:2px solid #30363d;border-top-color:#58a6ff;border-radius:50%;animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  footer{margin-top:auto;padding-top:2rem;font-size:.75rem;color:#484f58}
+  footer a{color:#58a6ff;text-decoration:none}
+</style>
+</head>
+<body>
+<h1>Ejas Homelab</h1>
+<p class="subtitle">Monitoring homelab services across Tailscale</p>
+<div class="legend">
+  <span><span class="ldot" style="background:#3fb950"></span> Up</span>
+  <span><span class="ldot" style="background:#d29922"></span> Degraded</span>
+  <span><span class="ldot" style="background:#f85149"></span> Down</span>
+</div>
+<div class="card">
+  <h2>Live Status</h2>
+  <div id="services"><div class="loading"><div class="spinner"></div></div></div>
+</div>
+<p class="refresh" id="refresh-time"></p>
+<footer>Powered by <a href="https://github.com/upptime/upptime">Upptime</a> · <a href="https://github.com/ejasmudar/homelab-status">Source</a></footer>
+<script>
+const API = 'https://raw.githubusercontent.com/ejasmudar/homelab-status/master/history/summary.json';
+const isInternal = s => s.url && (s.url.startsWith('http://100.') || s.url.startsWith('https://100.'));
+
+function ms(v){return v<1000?v+'ms':(v/1000).toFixed(1)+'s'}
+function render(sites){
+  const el=document.getElementById('services');
+  if(!sites.length){el.innerHTML='<div class="loading">No services found</div>';return}
+  // Separate public and internal
+  const pub=sites.filter(s=>!isInternal(s));
+  const int=sites.filter(s=>isInternal(s));
+  let html='';
+  const renderGroup=(list,label)=>{
+    if(!list.length)return;
+    if(label)html+=`<div style="font-size:.7rem;color:#484f58;text-transform:uppercase;letter-spacing:.06em;margin:.75rem 0 .35rem">${label}</div>`;
+    list.forEach(s=>{
+      const st=s.status==='up'?'up':s.status==='degraded'?'degraded':'down';
+      const url=s.url.startsWith('http://100.')||s.url.startsWith('https://100.')?'#':s.url;
+      const nameHtml=url==='#'?s.name:`<a href="${url}" target="_blank" rel="noopener">${s.name}</a>`;
+      html+=`<div class="svc">
+        <span class="dot ${st}"></span>
+        <span class="svc-name">${nameHtml}</span>
+        <span class="svc-meta">
+          <span class="badge ${st}">${st.toUpperCase()}</span>
+          <div class="svc-uptime">${s.uptime}</div>
+          <div class="svc-time">${ms(s.time)}</div>
+        </span>
+      </div>`;
+    });
+  };
+  renderGroup(pub,'Public');
+  renderGroup(int,'Internal (Tailscale)');
+  el.innerHTML=html;
+  document.getElementById('refresh-time').textContent='Last checked: '+new Date().toLocaleTimeString();
+}
+
+fetch(API).then(r=>r.json()).then(render).catch(()=>{
+  document.getElementById('services').innerHTML='<div class="loading" style="color:#f85149">Failed to load status data</div>';
+});
+// Auto-refresh every 5 minutes
+setInterval(()=>fetch(API).then(r=>r.json()).then(render).catch(()=>{}), 300000);
+</script>
+</body>
+</html>
