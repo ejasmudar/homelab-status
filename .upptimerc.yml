@@ -23,13 +23,13 @@ sites:
   # Internal Tailscale endpoints (requires Tailscale Action)
   - name: Proxmox1 (NAS)
     url: https://100.103.56.72:8006
-    allowInsecure: true
+    __dangerous__insecure: true
   - name: Proxmox3
     url: https://100.88.223.21:8006
-    allowInsecure: true
+    __dangerous__insecure: true
   - name: Proxmox5 (Dubai)
     url: https://100.107.192.45:8006
-    allowInsecure: true
+    __dangerous__insecure: true
   - name: Paperless-ngx (Internal)
     url: http://100.112.196.119:80
   - name: Home Assistant (Internal)
