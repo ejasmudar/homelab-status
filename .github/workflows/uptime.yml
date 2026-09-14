@@ -51,26 +51,6 @@ jobs:
         uses: tailscale/github-action@v4
         with:
           authkey: ${{ secrets.TS_AUTH_KEY }}
-      - name: Debug Tailscale connectivity
-        run: |
-          echo "=== Tailscale status ==="
-          tailscale status || true
-          echo ""
-          echo "=== Tailscale IP ==="
-          tailscale ip -4 || true
-          echo ""
-          echo "=== Ping tests ==="
-          for ip in 100.103.56.72 100.88.223.21 100.107.192.45 100.112.196.119 100.74.137.55; do
-            echo -n "$ip: "
-            ping -c 1 -W 3 $ip 2>&1 | tail -1 || echo "FAIL"
-          done
-          echo ""
-          echo "=== Curl tests ==="
-          for endpoint in "https://100.103.56.72:8006" "https://100.88.223.21:8006" "https://100.107.192.45:8006" "http://100.112.196.119:80" "http://100.74.137.55:80"; do
-            echo -n "$endpoint: "
-            curl -sk -o /dev/null -w "%{http_code}" --connect-timeout 5 --max-time 10 "$endpoint" 2>&1 || echo "CURL_FAIL"
-            echo ""
-          done
       - name: Check endpoint status
         uses: upptime/uptime-monitor@v1.44.0
         with:
