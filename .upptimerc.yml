@@ -48,7 +48,7 @@ sites:
   - name: n8n (Internal)
     url: http://100.95.191.99:5678
   - name: Hermes Agent
-    url: http://100.64.108.70:8080
+    url: http://100.64.108.70:8000
   - name: ubuntu-docker (Dashy)
     url: http://100.91.13.22:8080
 
