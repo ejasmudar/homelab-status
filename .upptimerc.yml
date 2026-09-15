@@ -52,6 +52,12 @@ sites:
   - name: ubuntu-docker (Dashy)
     url: http://100.91.13.22:8080
 
+  - name: Raspberrypi (Port 80)
+    url: http://100.104.220.128:80
+
+  - name: Raspberrypi (Port 8080)
+    url: http://100.104.220.128:8080
+
 notifications:
   - type: custom-webhook
     url: "https://ntfy.sh/ejasmudar-homelab-alerts"
