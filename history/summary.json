@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 701,
-    "timeDay": 743,
-    "timeWeek": 701,
-    "timeMonth": 701,
-    "timeYear": 701,
+    "time": 696,
+    "timeDay": 665,
+    "timeWeek": 696,
+    "timeMonth": 696,
+    "timeYear": 696,
     "dailyMinutesDown": {}
   },
   {
@@ -28,11 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 466,
-    "timeDay": 481,
-    "timeWeek": 466,
-    "timeMonth": 466,
-    "timeYear": 466,
+    "time": 453,
+    "timeDay": 375,
+    "timeWeek": 453,
+    "timeMonth": 453,
+    "timeYear": 453,
     "dailyMinutesDown": {}
   },
   {
@@ -46,11 +46,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 292,
-    "timeDay": 283,
-    "timeWeek": 292,
-    "timeMonth": 292,
-    "timeYear": 292,
+    "time": 294,
+    "timeDay": 306,
+    "timeWeek": 294,
+    "timeMonth": 294,
+    "timeYear": 294,
     "dailyMinutesDown": {}
   },
   {
@@ -59,13 +59,13 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.103.56.72.ico",
     "slug": "proxmox1-nas",
     "status": "down",
-    "uptime": "2.18%",
-    "uptimeDay": "8.86%",
-    "uptimeWeek": "2.18%",
-    "uptimeMonth": "2.18%",
-    "uptimeYear": "2.18%",
+    "uptime": "1.88%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "1.88%",
+    "uptimeMonth": "1.88%",
+    "uptimeYear": "1.88%",
     "time": 1414,
-    "timeDay": 1414,
+    "timeDay": 0,
     "timeWeek": 1414,
     "timeMonth": 1414,
     "timeYear": 1414,
@@ -74,7 +74,8 @@
       "2026-09-13": 1440,
       "2026-09-12": 1440,
       "2026-09-11": 1073,
-      "2026-09-15": 688
+      "2026-09-16": 190,
+      "2026-09-15": 1440
     }
   },
   {
@@ -94,7 +95,8 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-09-15": 688,
+      "2026-09-16": 190,
+      "2026-09-15": 1440,
       "2026-09-14": 223
     }
   },
@@ -104,13 +106,13 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.88.223.21.ico",
     "slug": "proxmox3",
     "status": "down",
-    "uptime": "2.34%",
-    "uptimeDay": "9.53%",
-    "uptimeWeek": "2.34%",
-    "uptimeMonth": "2.34%",
-    "uptimeYear": "2.34%",
+    "uptime": "2.02%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "2.02%",
+    "uptimeMonth": "2.02%",
+    "uptimeYear": "2.02%",
     "time": 1402,
-    "timeDay": 1402,
+    "timeDay": 0,
     "timeWeek": 1402,
     "timeMonth": 1402,
     "timeYear": 1402,
@@ -119,7 +121,8 @@
       "2026-09-13": 1440,
       "2026-09-12": 1440,
       "2026-09-11": 1068,
-      "2026-09-15": 688
+      "2026-09-16": 190,
+      "2026-09-15": 1440
     }
   },
   {
@@ -128,19 +131,20 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.93.156.124.ico",
     "slug": "proxmox4",
     "status": "down",
-    "uptime": "47.92%",
-    "uptimeDay": "47.92%",
-    "uptimeWeek": "47.92%",
-    "uptimeMonth": "47.92%",
-    "uptimeYear": "47.92%",
+    "uptime": "22.09%",
+    "uptimeDay": "12.14%",
+    "uptimeWeek": "22.09%",
+    "uptimeMonth": "22.09%",
+    "uptimeYear": "22.09%",
     "time": 1798,
-    "timeDay": 1798,
+    "timeDay": 0,
     "timeWeek": 1798,
     "timeMonth": 1798,
     "timeYear": 1798,
     "dailyMinutesDown": {
       "2026-09-14": 96,
-      "2026-09-15": 324
+      "2026-09-16": 190,
+      "2026-09-15": 1075
     }
   },
   {
@@ -149,13 +153,13 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.107.192.45.ico",
     "slug": "proxmox5-dubai",
     "status": "down",
-    "uptime": "2.50%",
-    "uptimeDay": "10.21%",
-    "uptimeWeek": "2.50%",
-    "uptimeMonth": "2.50%",
-    "uptimeYear": "2.50%",
+    "uptime": "2.16%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "2.16%",
+    "uptimeMonth": "2.16%",
+    "uptimeYear": "2.16%",
     "time": 1047,
-    "timeDay": 1047,
+    "timeDay": 0,
     "timeWeek": 1047,
     "timeMonth": 1047,
     "timeYear": 1047,
@@ -164,7 +168,8 @@
       "2026-09-13": 1440,
       "2026-09-12": 1440,
       "2026-09-11": 1063,
-      "2026-09-15": 688
+      "2026-09-16": 190,
+      "2026-09-15": 1440
     }
   },
   {
@@ -173,16 +178,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/n8n.mudar.online.ico",
     "slug": "n8n",
     "status": "up",
-    "uptime": "98.01%",
-    "uptimeDay": "98.01%",
-    "uptimeWeek": "98.01%",
-    "uptimeMonth": "98.01%",
-    "uptimeYear": "98.01%",
-    "time": 684,
-    "timeDay": 684,
-    "timeWeek": 684,
-    "timeMonth": 684,
-    "timeYear": 684,
+    "uptime": "99.08%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "99.08%",
+    "uptimeMonth": "99.08%",
+    "uptimeYear": "99.08%",
+    "time": 669,
+    "timeDay": 640,
+    "timeWeek": 669,
+    "timeMonth": 669,
+    "timeYear": 669,
     "dailyMinutesDown": {
       "2026-09-14": 16
     }
@@ -193,13 +198,13 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.112.196.119.ico",
     "slug": "paperless-ngx-internal",
     "status": "down",
-    "uptime": "3.43%",
-    "uptimeDay": "14.09%",
-    "uptimeWeek": "3.43%",
-    "uptimeMonth": "3.43%",
-    "uptimeYear": "3.43%",
+    "uptime": "2.97%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "2.97%",
+    "uptimeMonth": "2.97%",
+    "uptimeYear": "2.97%",
     "time": 766,
-    "timeDay": 766,
+    "timeDay": 0,
     "timeWeek": 766,
     "timeMonth": 766,
     "timeYear": 766,
@@ -208,7 +213,8 @@
       "2026-09-13": 1440,
       "2026-09-12": 1440,
       "2026-09-11": 1049,
-      "2026-09-15": 688
+      "2026-09-16": 190,
+      "2026-09-15": 1440
     }
   },
   {
@@ -217,13 +223,13 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.74.137.55.ico",
     "slug": "home-assistant-internal",
     "status": "down",
-    "uptime": "3.43%",
-    "uptimeDay": "14.08%",
-    "uptimeWeek": "3.43%",
-    "uptimeMonth": "3.43%",
-    "uptimeYear": "3.43%",
+    "uptime": "2.97%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "2.97%",
+    "uptimeMonth": "2.97%",
+    "uptimeYear": "2.97%",
     "time": 609,
-    "timeDay": 609,
+    "timeDay": 0,
     "timeWeek": 609,
     "timeMonth": 609,
     "timeYear": 609,
@@ -232,7 +238,8 @@
       "2026-09-13": 1440,
       "2026-09-12": 1440,
       "2026-09-11": 1044,
-      "2026-09-15": 688
+      "2026-09-16": 190,
+      "2026-09-15": 1440
     }
   },
   {
@@ -241,19 +248,20 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.95.191.99.ico",
     "slug": "n8n-internal",
     "status": "down",
-    "uptime": "60.23%",
-    "uptimeDay": "60.23%",
-    "uptimeWeek": "60.23%",
-    "uptimeMonth": "60.23%",
-    "uptimeYear": "60.23%",
+    "uptime": "27.77%",
+    "uptimeDay": "13.49%",
+    "uptimeWeek": "27.77%",
+    "uptimeMonth": "27.77%",
+    "uptimeYear": "27.77%",
     "time": 948,
-    "timeDay": 948,
+    "timeDay": 0,
     "timeWeek": 948,
     "timeMonth": 948,
     "timeYear": 948,
     "dailyMinutesDown": {
       "2026-09-14": 16,
-      "2026-09-15": 304
+      "2026-09-16": 190,
+      "2026-09-15": 1056
     }
   },
   {
@@ -263,21 +271,22 @@
     "slug": "hermes-agent",
     "status": "down",
     "uptime": "0.00%",
-    "uptimeDay": "0.00%",
+    "uptimeDay": "13.83%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
     "time": 12802,
-    "timeDay": 12802,
+    "timeDay": 0,
     "timeWeek": 12802,
     "timeMonth": 12802,
     "timeYear": 12802,
     "dailyMinutesDown": {
-      "2026-09-15": 449,
+      "2026-09-15": 1201,
       "2026-09-14": 1440,
       "2026-09-13": 1440,
       "2026-09-12": 1440,
-      "2026-09-11": 1054
+      "2026-09-11": 1054,
+      "2026-09-16": 190
     }
   },
   {
@@ -286,19 +295,20 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.91.13.22.ico",
     "slug": "ubuntu-docker-dashy",
     "status": "down",
-    "uptime": "55.10%",
-    "uptimeDay": "55.10%",
-    "uptimeWeek": "55.10%",
-    "uptimeMonth": "55.10%",
-    "uptimeYear": "55.10%",
+    "uptime": "25.39%",
+    "uptimeDay": "14.17%",
+    "uptimeWeek": "25.39%",
+    "uptimeMonth": "25.39%",
+    "uptimeYear": "25.39%",
     "time": 914,
-    "timeDay": 914,
+    "timeDay": 0,
     "timeWeek": 914,
     "timeMonth": 914,
     "timeYear": 914,
     "dailyMinutesDown": {
       "2026-09-14": 67,
-      "2026-09-15": 294
+      "2026-09-16": 190,
+      "2026-09-15": 1046
     }
   },
   {
@@ -307,18 +317,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.104.220.128.ico",
     "slug": "raspberrypi-port-80",
     "status": "down",
-    "uptime": "48.84%",
-    "uptimeDay": "48.84%",
-    "uptimeWeek": "48.84%",
-    "uptimeMonth": "48.84%",
-    "uptimeYear": "48.84%",
+    "uptime": "0.51%",
+    "uptimeDay": "0.51%",
+    "uptimeWeek": "0.51%",
+    "uptimeMonth": "0.51%",
+    "uptimeYear": "0.51%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-09-15": 5
+      "2026-09-16": 190,
+      "2026-09-15": 757
     }
   },
   {
@@ -327,18 +338,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/100.104.220.128.ico",
     "slug": "raspberrypi-port-8080",
     "status": "down",
-    "uptime": "95.72%",
-    "uptimeDay": "95.72%",
-    "uptimeWeek": "95.72%",
-    "uptimeMonth": "95.72%",
-    "uptimeYear": "95.72%",
+    "uptime": "0.51%",
+    "uptimeDay": "0.51%",
+    "uptimeWeek": "0.51%",
+    "uptimeMonth": "0.51%",
+    "uptimeYear": "0.51%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-09-15": 0
+      "2026-09-16": 190,
+      "2026-09-15": 752
     }
   }
 ]
